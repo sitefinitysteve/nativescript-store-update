@@ -1,11 +1,11 @@
 import * as moment from 'moment'
-import { Application, ApplicationSettings, Observable, Device, Dialogs, ConfirmOptions } from '@nativescript/core'
+import { ApplicationSettings, ConfirmOptions, Device, Dialogs } from '@nativescript/core'
 
 import { getAppIdSync, getVersionCodeSync, getVersionNameSync } from '@nativescript/appversion'
 
 import { AlertTypesConstants, UpdateTypesConstants } from './constants'
 import { LocalesHelper, VersionHelper } from './helpers'
-import { IStoreUpdateConfig, AlertOptions } from './interfaces'
+import { AlertOptions, IStoreUpdateConfig } from './interfaces'
 
 declare var global: any
 const LAST_VERSION_SKIPPED_KEY = 'lastVersionSkipped'
@@ -35,9 +35,7 @@ export class StoreUpdateCommon {
     if (config) this._init(config)
   }
 
-  /*
-   *  Public
-   */
+  //#region Public
 
   getBundleId(): string {
     return getAppIdSync()
@@ -134,9 +132,9 @@ export class StoreUpdateCommon {
     }
   }
 
-  /*
-   *  Private
-   */
+  //#endregion
+
+  //#region Private
 
   private _init(config: IStoreUpdateConfig) {
     const conf = {
@@ -222,4 +220,6 @@ export class StoreUpdateCommon {
     if (!this._alertOptions) return false
     return this._alertOptions.hasOwnProperty(key) && this._alertOptions[key] !== ''
   }
+
+  //#endregion
 }

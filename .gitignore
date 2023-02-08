@@ -23,7 +23,9 @@ demo-angular/*.d.ts
 demo-angular/node_modules
 demo-angular/hooks
 demo-angular/platforms
+publish/node_modules
 src/node_modules
 src/hooks
 *.tgz
 package-lock.json
+.idea

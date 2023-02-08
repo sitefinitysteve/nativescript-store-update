@@ -15,10 +15,7 @@ Application.on(Application.resumeEvent, () => {
 export class StoreUpdate {
   private static _common
 
-  /*
-  *  Public
-  */
-
+  //#region Public
   static init(config: IStoreUpdateConfig) {
     if (StoreUpdate._common) throw new Error('NS Store Update already configured')
     StoreUpdate._common = new StoreUpdateCommon({
@@ -35,18 +32,18 @@ export class StoreUpdate {
       .catch(console.error)
   }
 
-  /*
-   *  Protected
-   */
+  //#endregion Private
+
+  //#region Protected
 
   protected static _openStore() {
     const storeUrl = `market://details?id=${StoreUpdate._common.getBundleId()}`
     Utils.openUrl(storeUrl)
   }
 
-  /*
-   *  Private
-   */
+  //#endregion Protected
+
+  //#region Private
 
   private static _extendResults(result: IGoogleStoreResult) {
     return {
@@ -56,4 +53,6 @@ export class StoreUpdate {
       version: result.version,
     }
   }
+
+  //#endregion Private
 }

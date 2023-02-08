@@ -10,8 +10,8 @@ export interface IStoreUpdateConfig {
 }
 
 export interface AlertOptions {
-  title?: string,
-  message?: string,
-  updateButton?: string,
+  title?: string
+  message?: string
+  updateButton?: string
   skipButton?: string
 }

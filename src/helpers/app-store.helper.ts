@@ -6,7 +6,7 @@ export class AppStoreHelper {
   static getAppInfos(bundleID, countryCode?) {
     return AppStoreHelper._getLookupFile(bundleID, countryCode)
       .then(ResponseHelper.handleErrorStatus)
-      .then(response => response.json())
+      .then((response) => response.json())
       .then(AppStoreHelper._parseResource)
   }
 
