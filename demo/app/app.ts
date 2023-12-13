@@ -3,7 +3,7 @@ import './bundle-config'
 /* tslint:enable */
 
 import { AlertTypesConstants, StoreUpdate } from 'nativescript-store-update'
-import * as application from '@nativescript/core/application';
+import { Application, Utils } from '@nativescript/core';
 
 StoreUpdate.init({
   majorUpdateAlertType: AlertTypesConstants.OPTION,
@@ -14,4 +14,4 @@ StoreUpdate.init({
   },
 })
 
-application.start({ moduleName: 'main-page' })
+Application.run({ moduleName: 'main-page' });

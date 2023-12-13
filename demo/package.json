@@ -1,12 +1,15 @@
 {
   "dependencies": {
+    "@nativescript/core": "~8.5.0",
+    "@nativescript/unit-test-runner": "~3.0.0",
     "moment": "2.18.1",
     "nativescript-appversion": "^1.4.1",
-    "nativescript-store-update": "file:../src",
-    "@nativescript/core": "~8.5.0",
-    "@nativescript/unit-test-runner": "~3.0.0"
+    "nativescript-store-update": "file:../src"
   },
   "devDependencies": {
+    "@nativescript/ios": "8.6.3",
+    "@nativescript/types": "~8.5.0",
+    "@nativescript/webpack": "~5.0.0",
     "awesome-typescript-loader": "~3.1.3",
     "babel-traverse": "6.12.0",
     "babel-types": "6.11.1",
@@ -21,9 +24,7 @@
     "nativescript-css-loader": "~0.26.0",
     "nativescript-dev-typescript": "libs",
     "tslint": "~5.4.3",
-    "typescript": "~4.8.4",
-    "@nativescript/types": "~8.5.0",
-    "@nativescript/webpack": "~5.0.0"
+    "typescript": "~4.8.4"
   },
   "scripts": {
     "build.plugin": "cd ../src && npm run build",
