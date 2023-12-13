@@ -1,13 +1,17 @@
 {
     "compilerOptions": {
-        "target": "es5",
-        "module": "commonjs",
+        "target": "es2017",
+        "module": "esnext",
         "declaration": false,
-        "removeComments": true,
+        "removeComments": false,
         "noLib": false,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "lib": ["es2015", "dom"],
+        "lib": [
+            "es2015",
+            "dom",
+            "es2017"
+        ],
         "pretty": true,
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
@@ -19,9 +23,15 @@
         "noFallthroughCasesInSwitch": true,
         "baseUrl": ".",
         "paths": {
-            "*": ["./node_modules/*"]
-        }
+            "*": [
+                "./node_modules/*"
+            ]
+        },
+        "moduleResolution": "node"
     },
-    "exclude": ["node_modules", "platforms"],
+    "exclude": [
+        "node_modules",
+        "platforms"
+    ],
     "compileOnSave": false
 }
