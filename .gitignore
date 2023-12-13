@@ -7,9 +7,6 @@
 
 !/index.d.ts
 !/reference.d.ts
-!tslint-prettier.config.js
-!prettier.config.js
-!prettier.config.js
 !src/assign.helper.js
 
 demo/app/*.js

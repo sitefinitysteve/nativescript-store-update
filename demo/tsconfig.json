@@ -12,7 +12,7 @@
             "dom",
             "es2017"
         ],
-        "pretty": true,
+        "pretty": false,
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
         "noEmitHelpers": true,

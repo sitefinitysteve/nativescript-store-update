@@ -1,5 +1,5 @@
 const moment = require('moment')
-const platform = require('tns-core-modules/platform')
+const platform = require('@nativescript/core/platform')
 const StoreUpdateModule = require('nativescript-store-update')
 const AlertTypesConstants = StoreUpdateModule.AlertTypesConstants
 const LocalesHelper = StoreUpdateModule.LocalesHelper

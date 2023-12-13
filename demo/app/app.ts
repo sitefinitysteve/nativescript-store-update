@@ -1,12 +1,8 @@
-﻿/* tslint:disable */
-import './bundle-config'
-/* tslint:enable */
-
-import { AlertTypesConstants, StoreUpdate } from 'nativescript-store-update'
-import { Application, Utils } from '@nativescript/core';
+﻿import { AlertTypesConstants, StoreUpdate } from 'nativescript-store-update'
+import { Application, Utils } from '@nativescript/core'
 
 StoreUpdate.init({
-  majorUpdateAlertType: AlertTypesConstants.OPTION,
+  majorUpdateAlertType: AlertTypesConstants.FORCE,
   notifyNbDaysAfterRelease: 0,
   alertOptions: {
     title: 'Attention please',
@@ -14,4 +10,4 @@ StoreUpdate.init({
   },
 })
 
-Application.run({ moduleName: 'main-page' });
+Application.run({ moduleName: 'main-page' })

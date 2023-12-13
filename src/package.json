@@ -6,24 +6,22 @@
   "typings": "index.d.ts",
   "nativescript": {
     "platforms": {
-      "android": "6.0.0",
-      "ios": "6.0.0"
+      "android": "8.5.0",
+      "ios": "8.5.0"
     }
   },
   "scripts": {
     "tsc": "tsc -skipLibCheck",
     "build": "npm i && tsc",
     "setup": "npm i && cd ../demo && npm i && cd ../demo-angular && npm i && cd ../src",
-    "test.android": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build android && tns test android --justlaunch",
-    "test.ios": "npm i && npm run tsc && npm run tslint && cd ../demo && tns build ios && tns test ios --justlaunch",
-    "tslint": "cd .. && tslint \"**/*.ts\" --config tslint.json --exclude \"**/node_modules/**\" --exclude \"**/*.d.ts\" --exclude \"demo*/platforms/**\" --exclude \"**/hooks/**\"",
+    "test.android": "npm i && npm run tsc && cd ../demo && tns build android && tns test android --justlaunch",
+    "test.ios": "npm i && npm run tsc && cd ../demo && tns build ios && tns test ios --justlaunch",
     "plugin.tscwatch": "npm run tsc -- -w",
     "demo.ios": "npm i && npm run tsc && cd ../demo && tns run ios --syncAllFiles",
     "build.ios": "npm i && npm run tsc && cd ../demo && tns build ios --syncAllFiles",
     "demo.android": "npm i && npm run tsc && cd ../demo && tns run android --syncAllFiles",
     "demo.reset": "cd ../demo && rimraf platforms hooks node_modules && npm i",
-    "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../demo-angular && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules",
-    "ci.tslint": "npm i && tslint '**/*.ts' --config '../tslint.json' --exclude '**/node_modules/**'"
+    "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../demo-angular && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules"
   },
   "keywords": [
     "NativeScript",
@@ -34,11 +32,12 @@
     "Update",
     "Store",
     "App Store",
-    "Chronogolf"
+    "PLay Store",
+    "SitefinitySteve"
   ],
   "author": {
-    "name": "Chronogolf",
-    "email": "contact@chronogolf.com"
+    "name": "Steve McNiven-Scott",
+    "email": "steve@sitefinitysteve.com"
   },
   "bugs": {
     "url": "https://github.com/chronogolf/nativescript-store-update/issues"
@@ -47,28 +46,23 @@
   "homepage": "https://github.com/chronogolf/nativescript-store-update",
   "readmeFilename": "README.md",
   "peerDependencies": {
-    "@nativescript/core": "~8.4.7",
-    "@nativescript/appversion": "~2.0.0"
+    "@nativescript/appversion": "~2.0.0",
+    "@nativescript/core": "~8.5.0"
   },
   "devDependencies": {
     "@angular/core": "~15.1.4",
+    "@nativescript/core": "~8.5.0",
+    "@nativescript/types": "~8.5.0",
+    "@nativescript/webpack": "~5.0.18",
     "format": "^0.2.2",
-    "prettier": "^2.8.4",
     "prompt": "^1.3.0",
     "rimraf": "^4.1.2",
-    "rxjs": "^7.8.0",
-    "@nativescript/core": "~8.4.7",
-    "@nativescript/types": "~8.4.0",
-    "@nativescript/webpack": "~5.0.13",
-    "tslint": "^6.1.3",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.3.0",
     "typescript": "~4.8.4"
   },
   "dependencies": {
+    "@nativescript/appversion": "~2.0.0",
     "@types/moment": "^2.13.0",
-    "moment": "~2.29.4",
-    "@nativescript/appversion": "~2.0.0"
+    "moment": "~2.29.4"
   },
   "bootstrapper": "nativescript-plugin-seed"
 }
