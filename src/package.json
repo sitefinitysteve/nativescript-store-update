@@ -14,12 +14,12 @@
     "tsc": "tsc -skipLibCheck",
     "build": "npm i && tsc",
     "setup": "npm i && cd ../demo && npm i && cd ../demo-angular && npm i && cd ../src",
-    "test.android": "npm i && npm run tsc && cd ../demo && tns build android && tns test android --justlaunch",
-    "test.ios": "npm i && npm run tsc && cd ../demo && tns build ios && tns test ios --justlaunch",
+    "test.android": "npm i && npm run tsc && cd ../demo && ns build android && ns test android --justlaunch",
+    "test.ios": "npm i && npm run tsc && cd ../demo && ns build ios && ns test ios --justlaunch",
     "plugin.tscwatch": "npm run tsc -- -w",
-    "demo.ios": "npm i && npm run tsc && cd ../demo && tns run ios --syncAllFiles",
-    "build.ios": "npm i && npm run tsc && cd ../demo && tns build ios --syncAllFiles",
-    "demo.android": "npm i && npm run tsc && cd ../demo && tns run android --syncAllFiles",
+    "demo.ios": "npm i && npm run tsc && cd ../demo && ns run ios --syncAllFiles",
+    "build.ios": "npm i && npm run tsc && cd ../demo && ns build ios --syncAllFiles",
+    "demo.android": "npm i && npm run tsc && cd ../demo && ns run android --syncAllFiles",
     "demo.reset": "cd ../demo && rimraf platforms hooks node_modules && npm i",
     "clean": "cd ../demo && rimraf hooks node_modules platforms && cd ../demo-angular && rimraf hooks node_modules platforms && cd ../src && rimraf node_modules"
   },
@@ -40,7 +40,7 @@
     "email": "steve@sitefinitysteve.com"
   },
   "bugs": {
-    "url": "https://github.com/chronogolf/nativescript-store-update/issues"
+    "url": "https://github.com/chronogolf/nativescript-store-update/issuecds"
   },
   "license": "Apache-2.0",
   "homepage": "https://github.com/chronogolf/nativescript-store-update",
