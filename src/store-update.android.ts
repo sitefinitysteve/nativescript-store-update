@@ -17,11 +17,12 @@ export class StoreUpdate {
 
   //#region Public
   static init(config: IStoreUpdateConfig) {
-    if (StoreUpdate._common) throw new Error('NS Store Update already configured')
-    StoreUpdate._common = new StoreUpdateCommon({
-      ...config,
-      onConfirmed: StoreUpdate._openStore.bind(StoreUpdate),
-    })
+    if (!StoreUpdate._common) {
+      StoreUpdate._common = new StoreUpdateCommon({
+        ...config,
+        onConfirmed: StoreUpdate._openStore.bind(StoreUpdate),
+      })
+    }
   }
 
   static checkForUpdate() {

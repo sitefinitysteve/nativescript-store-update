@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "@jsdevtools/coverage-istanbul-loader": "3.0.5",
+    "@nativescript/android": "8.6.2",
     "@nativescript/core": "~8.5.0",
     "@nativescript/ios": "8.6.3",
     "@nativescript/types": "~8.5.0",

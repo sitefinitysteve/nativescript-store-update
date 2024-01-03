@@ -238,27 +238,23 @@ describe('StoreUpdateCommon ', () => {
 
   describe('_getUpdateTypeForVersion function', () => {
     it('returns MAJOR code if major update', () => {
-      expect(getStoreUpdateCommon()._getUpdateTypeForVersion(testConstants.updates.major)).toEqual(
-        UpdateTypesConstants.MAJOR
-      )
+      var version = getStoreUpdateCommon()._getUpdateTypeForVersion(testConstants.updates.major);
+      expect(version).toEqual(UpdateTypesConstants.MAJOR)
     })
 
     it('returns MINOR code if minor update', () => {
-      expect(getStoreUpdateCommon()._getUpdateTypeForVersion(testConstants.updates.minor)).toEqual(
-        UpdateTypesConstants.MINOR
-      )
+      var version = getStoreUpdateCommon()._getUpdateTypeForVersion(testConstants.updates.minor);
+      expect(version).toEqual(UpdateTypesConstants.MINOR)
     })
 
     it('returns PATCH code if patch update', () => {
-      expect(getStoreUpdateCommon()._getUpdateTypeForVersion(testConstants.updates.patch)).toEqual(
-        UpdateTypesConstants.PATCH
-      )
+      var version = getStoreUpdateCommon()._getUpdateTypeForVersion(testConstants.updates.patch);
+      expect(version).toEqual(UpdateTypesConstants.PATCH)
     })
 
     it('returns REVISION code if revision update', () => {
-      expect(getStoreUpdateCommon()._getUpdateTypeForVersion(testConstants.updates.revision)).toEqual(
-        UpdateTypesConstants.REVISION
-      )
+      var version = getStoreUpdateCommon()._getUpdateTypeForVersion(testConstants.updates.revision);
+      expect(version).toEqual(UpdateTypesConstants.REVISION)
     })
 
     it('returns -1 code if no update', () => {
@@ -366,16 +362,19 @@ describe('StoreUpdateCommon ', () => {
     })
 
     it('returns false if store version is not defined', () => {
-      expect(getStoreUpdateCommon()._isCurrentVersionSkipped(testConstants.updates.major)).toBe(false)
+      var data = getStoreUpdateCommon()._isCurrentVersionSkipped(testConstants.updates.major);
+      expect(data).toBe(false)
     })
 
     it('returns true if store version is matching local', () => {
       appSettings.setString('lastVersionSkipped', testConstants.updates.major)
-      expect(getStoreUpdateCommon()._isCurrentVersionSkipped(testConstants.updates.major)).toBe(true)
+      var data = getStoreUpdateCommon()._isCurrentVersionSkipped(testConstants.updates.major);
+      expect(data).toBe(true)
     })
 
     it('returns false if store version is not matching local', () => {
-      expect(getStoreUpdateCommon()._isCurrentVersionSkipped(testConstants.updates.minor)).toBe(false)
+      var data = getStoreUpdateCommon()._isCurrentVersionSkipped(testConstants.updates.minor);
+      expect(data).toBe(false)
     })
 
     afterAll(() => {

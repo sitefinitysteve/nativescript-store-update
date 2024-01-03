@@ -160,6 +160,8 @@ export class StoreUpdateCommon {
   }
 
   private _isCurrentVersionSkipped(currentAppStoreVersion: string): boolean {
+    if (!ApplicationSettings.hasKey(LAST_VERSION_SKIPPED_KEY)) return false
+      
     const lastVersionSkipped = ApplicationSettings.getString(LAST_VERSION_SKIPPED_KEY)
     return currentAppStoreVersion === lastVersionSkipped
   }
