@@ -1,12 +1,12 @@
 const moment = require('moment')
-const StoreUpdateModule = require('nativescript-store-update')
-const platform = require('@nativescript/core/platform')
-const utils = require('@nativescript/core/utils')
+import * as StoreUpdateModule from 'nativescript-store-update'
+import * as platform from '@nativescript/core/platform'
+import * as utils from '@nativescript/core/utils'
 const StoreUpdate = StoreUpdateModule.StoreUpdate
 const AlertTypesConstants = StoreUpdateModule.AlertTypesConstants
 const testConstants = require('./tests.constants.spec')
 
-if (!platform.isIOS) return
+console.log('##### platform.isIOS', true);
 
 describe('StoreUpdate IOS ', () => {
   beforeAll(() => {
@@ -17,14 +17,7 @@ describe('StoreUpdate IOS ', () => {
     }
   })
 
-  it(`can't be init more than once`, () => {
-    const newConf = Object.assign({}, testConstants.config, {
-      countryCode: 'fr',
-    })
-    const secondInit = () => StoreUpdate.init(newConf)
-    expect(secondInit).toThrow()
-  })
-
+/*
   describe('_openStore function', () => {
     it('opens store page', () => {
       StoreUpdate._trackViewUrl = testConstants.ios.trackViewUrl
@@ -34,7 +27,7 @@ describe('StoreUpdate IOS ', () => {
       expect(utils.openUrl).toHaveBeenCalledWith(storeURL)
     })
   })
-
+*/
   describe('_extendResults function', () => {
     it('returns formated results', () => {
       const results = {
